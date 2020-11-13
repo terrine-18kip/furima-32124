@@ -2,18 +2,16 @@
 
 ## users テーブル
 
-| Column          | Type    | Options                                       |
-| --------------- | ------- | --------------------------------------------- |
-| nickname        | string  | null: false                                   |
-| email           | string  | null: false, unique: true, confirmation: true |
-| password        | string  | null: false, length: { minimum: 6 }           |
-| last_name       | string  | null: false                                   |
-| first_name      | string  | null: false                                   |
-| last_name_kana  | string  | null: false                                   |
-| first_name_kana | string  | null: false                                   |
-| birth_year      | integer | null: false                                   |
-| birth_month     | integer | null: false                                   |
-| birth_day       | integer | null: false                                   |
+| Column             | Type    | Options                                       |
+| ------------------ | ------- | --------------------------------------------- |
+| nickname           | string  | null: false                                   |
+| email              | string  | null: false, unique: true, confirmation: true |
+| encrypted_password | string  | null: false, length: { minimum: 6 }           |
+| last_name          | string  | null: false                                   |
+| first_name         | string  | null: false                                   |
+| last_name_kana     | string  | null: false                                   |
+| first_name_kana    | string  | null: false                                   |
+| birthday           | date    | null: false                                   |
 
 ### Association
 
@@ -24,14 +22,14 @@
 
 | Column           | Type       | Options                                                         |
 | ---------------- | ---------- | --------------------------------------------------------------- |
-| item_name        | string     | null: false, length: { maximum: 6 }                             |
-| item_explain     | text       | null: false, length: { maximum: 1000 }                          |
-| item_category_id | integer    | null: false                                                     |
-| item_status_id   | integer    | null: false                                                     |
+| name             | string     | null: false, length: { maximum: 6 }                             |
+| explain          | text       | null: false, length: { maximum: 1000 }                          |
+| category_id      | integer    | null: false                                                     |
+| status_id        | integer    | null: false                                                     |
 | ship_cost_id     | integer    | null: false                                                     |
 | ship_area_id     | integer    | null: false                                                     |
 | ship_days_id     | integer    | null: false                                                     |
-| item_price       | integer    | null: false, greater_than_or_equal_to: 300, less_than: 10000000 |
+| price            | integer    | null: false, greater_than_or_equal_to: 300, less_than: 10000000 |
 | user             | references | null: false, foreign_key: true                                  |
 
 ### Association
