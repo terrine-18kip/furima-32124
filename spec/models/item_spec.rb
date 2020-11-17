@@ -53,9 +53,9 @@ RSpec.describe Item, type: :model do
     end
 
     it '発送までの日数の情報がなければ登録できないこと' do
-      @item.ship_days_id = 0
+      @item.schedule_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include('Ship days must be other than 0')
+      expect(@item.errors.full_messages).to include('Schedule must be other than 0')
     end
 
     it '価格が空では登録できないこと' do
