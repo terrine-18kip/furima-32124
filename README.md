@@ -22,7 +22,7 @@
 
 | Column           | Type       | Options                                                         |
 | ---------------- | ---------- | --------------------------------------------------------------- |
-| name             | string     | null: false, length: { maximum: 6 }                             |
+| name             | string     | null: false, length: { maximum: 40 }                            |
 | explain          | text       | null: false, length: { maximum: 1000 }                          |
 | category_id      | integer    | null: false                                                     |
 | status_id        | integer    | null: false                                                     |
