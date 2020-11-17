@@ -6,8 +6,8 @@ window.addEventListener('load', function(){
     const profit = document.getElementById("profit")
     const taxPrice = itemPrice.value * 0.1
     const profitPrice = itemPrice.value * 0.9
-    addTaxPrice.innerHTML = taxPrice
-    profit.innerHTML = `${profitPrice}`
+    addTaxPrice.innerHTML = Math.round(taxPrice)
+    profit.innerHTML = Math.round(profitPrice)
   })
 
 })
