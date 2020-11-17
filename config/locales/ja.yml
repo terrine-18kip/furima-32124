@@ -43,6 +43,16 @@ ja:
         last_name_kana: お名前カナ（姓）
         first_name_kana: お名前カナ（名）
         birthday: 生年月日
+      item:
+        name: 商品名
+        explain: 商品の説明
+        category_id: カテゴリー
+        status_id: 商品の状態
+        ship_cost_id: 配送料の負担
+        ship_area_id: 発送元の地域
+        ship_days_id: 発送までの日数
+        price: 販売価格
+        image: 出品画像
     models:
       user: ユーザ
   devise:
