@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   validates :ship_area_id, presence: true, numericality: { other_than: 0 }
   validates :ship_days_id, presence: true, numericality: { other_than: 0 }
   validates :price,        presence: true,
-                           numericality: { greater_than_or_equal_to: 300, less_than: 10000000 }
+                           numericality: { greater_than_or_equal_to: 300, less_than: 10_000_000 }
   validates :image,        presence: true
 
   belongs_to :user
@@ -19,5 +19,4 @@ class Item < ApplicationRecord
   belongs_to :cost
   belongs_to :area
   belongs_to :day
-
 end

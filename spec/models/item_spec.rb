@@ -31,31 +31,31 @@ RSpec.describe Item, type: :model do
     it 'カテゴリーの情報がなければ登録できないこと' do
       @item.category_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Category must be other than 0")
+      expect(@item.errors.full_messages).to include('Category must be other than 0')
     end
 
     it '商品の状態の情報がなければ登録できないこと' do
       @item.status_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Status must be other than 0")
+      expect(@item.errors.full_messages).to include('Status must be other than 0')
     end
 
     it '配送料の負担の情報がなければ登録できないこと' do
       @item.ship_cost_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship cost must be other than 0")
+      expect(@item.errors.full_messages).to include('Ship cost must be other than 0')
     end
 
     it '発送元の地域の情報がなければ登録できないこと' do
       @item.ship_area_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship area must be other than 0")
+      expect(@item.errors.full_messages).to include('Ship area must be other than 0')
     end
 
     it '発送までの日数の情報がなければ登録できないこと' do
       @item.ship_days_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Ship days must be other than 0")
+      expect(@item.errors.full_messages).to include('Ship days must be other than 0')
     end
 
     it '価格が空では登録できないこと' do
@@ -67,26 +67,25 @@ RSpec.describe Item, type: :model do
     it '価格が¥300未満では登録できないこと' do
       @item.price = 299
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
+      expect(@item.errors.full_messages).to include('Price must be greater than or equal to 300')
     end
 
     it '価格が¥10,000,000以上では登録できないこと' do
-      @item.price = 10000000
+      @item.price = 10_000_000
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price must be less than 10000000")
+      expect(@item.errors.full_messages).to include('Price must be less than 10000000')
     end
 
     it '価格が全角では登録できないこと' do
-      @item.price = "１０００"
+      @item.price = '１０００'
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price is not a number")
+      expect(@item.errors.full_messages).to include('Price is not a number')
     end
 
     it 'userが紐ついていないと登録できないこと' do
       @item.user = nil
       @item.valid?
-      expect(@item.errors.full_messages).to include("User must exist")
+      expect(@item.errors.full_messages).to include('User must exist')
     end
-
   end
 end
