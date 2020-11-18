@@ -20,17 +20,17 @@
 
 ## items テーブル
 
-| Column           | Type       | Options                                                         |
-| ---------------- | ---------- | --------------------------------------------------------------- |
-| name             | string     | null: false, length: { maximum: 40 }                            |
-| explain          | text       | null: false, length: { maximum: 1000 }                          |
-| category_id      | integer    | null: false                                                     |
-| status_id        | integer    | null: false                                                     |
-| ship_cost_id     | integer    | null: false                                                     |
-| ship_area_id     | integer    | null: false                                                     |
-| ship_days_id     | integer    | null: false                                                     |
-| price            | integer    | null: false, greater_than_or_equal_to: 300, less_than: 10000000 |
-| user             | references | null: false, foreign_key: true                                  |
+| Column       | Type       | Options                                                         |
+| ------------ | ---------- | --------------------------------------------------------------- |
+| name         | string     | null: false, length: { maximum: 40 }                            |
+| explain      | text       | null: false, length: { maximum: 1000 }                          |
+| category_id  | integer    | null: false                                                     |
+| status_id    | integer    | null: false                                                     |
+| ship_cost_id | integer    | null: false                                                     |
+| ship_area_id | integer    | null: false                                                     |
+| schedule_id  | integer    | null: false                                                     |
+| price        | integer    | null: false, greater_than_or_equal_to: 300, less_than: 10000000 |
+| user         | references | null: false, foreign_key: true                                  |
 
 ### Association
 
