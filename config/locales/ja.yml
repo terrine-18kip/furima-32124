@@ -50,7 +50,7 @@ ja:
         status_id: 商品の状態
         ship_cost_id: 配送料の負担
         ship_area_id: 発送元の地域
-        ship_days_id: 発送までの日数
+        schedule_id: 発送までの日数
         price: 販売価格
         image: 出品画像
     models:
@@ -185,7 +185,7 @@ ja:
       not_a_number: は数値で入力してください
       not_an_integer: は整数で入力してください
       odd: は奇数にしてください
-      other_than: は%{count}以外の値にしてください
+      other_than: を選択してください
       present: は入力しないでください
       required: を入力してください
       taken: はすでに存在します
