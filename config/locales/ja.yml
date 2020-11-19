@@ -49,7 +49,7 @@ ja:
         category_id: カテゴリー
         status_id: 商品の状態
         ship_cost_id: 配送料の負担
-        ship_area_id: 発送元の地域
+        prefecture_id: 発送元の地域
         schedule_id: 発送までの日数
         price: 販売価格
         image: 出品画像

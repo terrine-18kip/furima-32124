@@ -5,7 +5,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :status_id
     validates :ship_cost_id
-    validates :ship_area_id
+    validates :prefecture_id
     validates :schedule_id
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than: 10_000_000 }
     validates :image
@@ -15,7 +15,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :status_id
     validates :ship_cost_id
-    validates :ship_area_id
+    validates :prefecture_id
     validates :schedule_id
   end
 
@@ -26,6 +26,6 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :status
   belongs_to :ship_cost
-  belongs_to :ship_area
+  belongs_to :prefecture
   belongs_to :schedule
 end

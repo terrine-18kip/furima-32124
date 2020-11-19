@@ -47,7 +47,7 @@ RSpec.describe Item, type: :model do
     end
 
     it '発送元の地域の情報がなければ登録できないこと' do
-      @item.ship_area_id = 0
+      @item.prefecture_id = 0
       @item.valid?
       expect(@item.errors.full_messages).to include('Ship area must be other than 0')
     end
