@@ -35,9 +35,9 @@
 ### Association
 
 - belongs_to :user
-- has_one    :buy
+- has_one    :order
 
-## buys テーブル
+## orders テーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
@@ -60,8 +60,8 @@
 | street        | string     | null: false                    |
 | building      | string     |                                |
 | phone         | string     | null: false, limit: 11         |
-| buy           | references | null: false, foreign_key: true |
+| order         | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :buy
+- belongs_to :order

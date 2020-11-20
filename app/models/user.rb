@@ -13,4 +13,5 @@ class User < ApplicationRecord
   validates :last_name_kana, :first_name_kana, format: { with: KANA_REGEX }
 
   has_many :items
+  has_one  :order
 end

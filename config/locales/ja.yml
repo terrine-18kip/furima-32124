@@ -49,12 +49,22 @@ ja:
         category_id: カテゴリー
         status_id: 商品の状態
         ship_cost_id: 配送料の負担
-        ship_area_id: 発送元の地域
+        prefecture_id: 発送元の地域
         schedule_id: 発送までの日数
         price: 販売価格
         image: 出品画像
     models:
       user: ユーザ
+  activemodel:
+    attributes:
+      order_address:
+        postal_number: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        street: 番地
+        building: 建物名
+        phone: 電話番号
+        token: クレジットカード情報
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
