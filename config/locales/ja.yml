@@ -64,6 +64,7 @@ ja:
         street: 番地
         building: 建物名
         phone: 電話番号
+        token: クレジットカード情報
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
