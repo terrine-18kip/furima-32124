@@ -81,6 +81,7 @@
   </div>
   <%# /商品の概要 %>
 
+  <%# コメント機能 %>
   <div class="comment-box">
     <%= form_with model: [@item, @message] do |f| %>
       <%= f.text_area :text, class:"comment-text" %>
@@ -94,9 +95,11 @@
     <div id='messages'>
       <% @messages.reverse_each do |message| %>
         <p><%= message.text %></p>
-      <%end%>
+      <% end %>
     </div>
   </div>
+  <%# /コメント機能 %>
+
   <div class="links">
     <a href="#" class="change-item-btn">
       ＜ 前の商品
