@@ -32,7 +32,7 @@ class Item < ApplicationRecord
   belongs_to :schedule
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Item.where('name LIKE(?)', "%#{search}%")
     else
       Item.all
