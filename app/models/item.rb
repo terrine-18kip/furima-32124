@@ -30,4 +30,12 @@ class Item < ApplicationRecord
   belongs_to :ship_cost
   belongs_to :prefecture
   belongs_to :schedule
+
+  def self.search(search)
+    if search != ''
+      Item.where('name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end
